@@ -25,7 +25,7 @@ public class UserREST {
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping
+	@PostMapping("/guardar")
 	private ResponseEntity<User> guardar (@RequestBody User user){
 		User temporal = userService.create(user);
 		
