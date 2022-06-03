@@ -45,18 +45,12 @@ public class UserREST {
 		return ResponseEntity.ok(userService.getAllUser());
 	}
 	
-	/*@GetMapping("/delete/{id}")
-	private ResponseEntity<Void> delete (@RequestBody User user){
-		userService.delete(user);
-		return ResponseEntity.ok().build();
-	}*/
-	
 	@GetMapping (value = "/All")
 	public List<User> getAll(){ 
 		return userService.getAllUser();
 	}
 	
-	@Transactional
+	//@Transactional
 	@DeleteMapping(value = "/delete/{id}")
 	public ResponseEntity<?> delete(@PathVariable(value = "id") Long userId) {
 		
