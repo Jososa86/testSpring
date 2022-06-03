@@ -13,7 +13,7 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	public Long id;
 	
 	@Column
 	private String name;
@@ -27,6 +27,15 @@ public class User {
 	@Column
 	private String password;
 		
+	public User(Long id, String name, String email, String telephone, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.telephone = telephone;
+		this.password = password;
+	}
+
 	public User(String name, String email, String telephone, String password) {
 		this.name = name;
 		this.email = email;
